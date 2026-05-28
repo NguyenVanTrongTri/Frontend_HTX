@@ -1,0 +1,10 @@
+{
+  "name": "version6: VietAgri Digital",
+  "description": "Nền tảng số hóa nông nghiệp Việt Nam - Chuyển đổi số cho HTX và nông dân.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

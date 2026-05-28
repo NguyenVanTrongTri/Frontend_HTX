@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #004d40;
+  --color-mint: #4ade80;
+  --color-amber: #f59e0b;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+  
+  body {
+    @apply text-slate-800 antialiased bg-slate-50;
+  }
+
+  /* Cấp 1: Tiêu đề trang (Page Titles, Hero Headers) */
+  h1, .h1-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight;
+  }
+
+  /* Cấp 2: Tiêu đề phần (Section Headers, Card Titles lớn) */
+  h2, .h2-title {
+    @apply text-2xl md:text-3xl font-black tracking-tight leading-snug;
+  }
+
+  /* Cấp 3: Tiêu đề phụ (Subtitles, Widget Headers) */
+  h3, .h3-title {
+    @apply text-lg md:text-xl font-bold tracking-tight leading-snug;
+  }
+
+  /* Chữ nội dung cơ bản */
+  p, .body-text {
+    @apply text-sm md:text-base font-medium leading-relaxed;
+  }
+
+  /* Chữ chú thích, label nhỏ */
+  .caption-text {
+    @apply text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400;
+  }
+
+  /* Custom Elegant Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+}
+
+/* Ẩn con mắt mặc định của trình duyệt */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none !important;
+}
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+}
